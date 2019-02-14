@@ -14,13 +14,14 @@ document.getElementById("date").innerHTML = Date();
         
 <hr noshade style="width:500px"> 
 <h3>Derzeit auf Sendung</h3>
-        
+<p id="date"></p>
+<script>        
 n =  new Date();
 y = n.getFullYear();
 m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-<p id="date"></p>        
+</script>       
         
 <p>
 -Aktuelle Shows-
