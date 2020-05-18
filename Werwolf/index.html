@@ -7,7 +7,7 @@
     <meta name="description" content="Test : test">
 
     <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"> -->
-    <title>Ultimate Werewolf Game Generator</title>
+    <title>Werewolf Forumsspiel Generator</title>
   </head>
 
   <body>
@@ -53,13 +53,13 @@
   
 	
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<h2>Ultimate Werewolf</h2>	
+	<h2>Forum Werwolf</h2>	
 	<div id="pregame_div">		
 		Player Names: <textarea id="players_text" title="Enter the players names, separated by commas." class="inline"></textarea>		
 		<table class = "inline">
 			<tr>
-				<td><button id="random_button" title="Type in the players' names, then click this button to generate a random game!">Random Game!</button></td>
-				<td><button id="generate_button" class="inline" title="Type in the players' names, select an equal amount of roles, then click this button to start the game!">Generate!</button></td>
+				<td><button id="random_button" title="Tippe die Namen der Spieler ein, klicke dann auf den Button um ein zufälliges Spiel zu erzeugen!">Zufälliges Spiel!</button></td>
+				<td><button id="generate_button" class="inline" title="Tippe die Namen der Spieler ein, wähle die passende Anzahl an Rollen aus, klicke dann auf den Button um das Spiel zu starten">Generiere!</button></td>
 			</tr>			
 		</table>
 		
@@ -290,7 +290,7 @@
 		}
 		
 		function update_player_status(){
-			$("#player_status").html("Players Alive: " + players_alive + "<br> Players Dead: " + players_dead);
+			$("#player_status").html("Spieler am Leben: " + players_alive + "<br> Spieler tot: " + players_dead);
 		}
 		
 		/*function start_timer(){
