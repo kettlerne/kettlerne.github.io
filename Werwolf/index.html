@@ -97,7 +97,7 @@
 		
 		$("#generate_button").click(function(){			
 			$("#game_div").html("");			
-			var players = $("#players_text").val().split('\n');
+			var players = $("#players_text").val().split(',');
 			for(var i in players)
 				console.log(players[i]);
 			var roles = count_roles();
@@ -115,7 +115,7 @@
 		
 		$("#random_button").click(function(){			
 			$("#game_div").html("");			
-			var players = $("#players_text").val().split('\n');
+			var players = $("#players_text").val().split(',');
 			for(var i in players)
 				console.log(players[i]);
 			var roles = random_roles(players.length);
