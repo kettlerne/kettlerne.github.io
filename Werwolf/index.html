@@ -104,9 +104,9 @@
 			console.log(JSON.stringify(roles));
 			if(roles.length != players.length){
 				if(roles.length > players.length)
-					alert(roles.length - players.length + " Mehr Rollen als Spieler");
+					alert(roles.length - players.length + " Rollen mehr als Spieler");
 				else
-					alert(players.length - roles.length + " Mehr Spieler als Rollen.");
+					alert(players.length - roles.length + " Spieler mehr als Rollen.");
 			}else{	
 				create_game(players,roles);
 			}
@@ -115,7 +115,7 @@
 		
 		$("#random_button").click(function(){			
 			$("#game_div").html("");			
-			var players = $("#players_text").val().split(',');
+			var players = $("#players_text").val().split('\s');
 			for(var i in players)
 				console.log(players[i]);
 			var roles = random_roles(players.length);
@@ -156,14 +156,14 @@
 		}
 		
 		$("#next_button").click(function(){
-			if(day == "Night"){
-				day = "Day";
-				day_button_msg = "Go to sleep";
+			if(day == "Nacht"){
+				day = "Tag";
+				day_button_msg = "schlafen gehen";
 			}
 			else{
-				day = "Night";
+				day = "Nacht";
 				phase_counter++;
-				day_button_msg = "Wake Up";
+				day_button_msg = "Aufwachen";
 			}
 			
 			update_day_information();			
@@ -274,9 +274,9 @@
 		}
 		
 		function reset_elements(){
-			day = "Night";
+			day = "Nacht";
 			phase_counter = 1;
-			day_button_msg = "Wake Up";
+			day_button_msg = "Aufwachen";
 			update_day_information();
 			
 			
