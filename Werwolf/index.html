@@ -58,8 +58,8 @@
 		Spielernamen: <textarea id="players_text" title="Tippe die Namen der Spieler ein, getrennt mit einem Komma" class="inline"></textarea>		
 		<table class = "inline">
 			<tr>
+				<td><button id="generate_button" class="inline" title="Tippe die Namen der Spieler ein, wähle die passende Anzahl an Rollen aus, klicke dann auf den Button um das Spiel zu starten">Generiere!</button></td>			
 				<td><button id="random_button" title="Tippe die Namen der Spieler ein, klicke dann auf den Button um ein zufälliges Spiel zu erzeugen!">Zufälliges Spiel!</button></td>
-				<td><button id="generate_button" class="inline" title="Tippe die Namen der Spieler ein, wähle die passende Anzahl an Rollen aus, klicke dann auf den Button um das Spiel zu starten">Generiere!</button></td>
 			</tr>			
 		</table>
 		
@@ -84,13 +84,13 @@
 	<script>	
 		var day = "Night";
 		var phase_counter = 1;
-		var day_button_msg = "Wake Up";
+		var day_button_msg = "Aufwachen";
 		var players_dead = 0;
 		var players_alive;
 		var village_roles = ["Dorfbewohner", "Seher", "insane seer", "naive seer", "aura seer", "apprentice seer", "bodyguard", "cupid", "diseased", "ghost", "hunter", "idiot", "lycan", "witch", "martyr", "mason", "mayor", "old hag", "old man"]
 		var village_roles_2 = ["P.I.", "pacifist", "priest", "prince", "spellcaster", "tough guy", "trouble maker", "cursed", "frankenstein", "grave digger", "gold digger", "gunsmith", "watcher", "tracker", "shirley temple", "bloody mary", "van helsing", "crazed villager", "samurai", "bus driver", "the count", "the mummy", "beholder", "sasquatch", "leprachaun"];
 		var werewolf_roles = ["Werwolf","wolf cub", "wolf man", "minion", "sorcerer", "Einsamer Wolf", "kamikaze wolf", "teen wolf", "emma watson", "seer's brother", "mason wolf", "werewolf busdriver", "dream wolf"];
-		var third_party_roles = ["Vampir","Zombie", "blob", "serial killer", "cult master", "drunk", "doppelganger", "hoodlum", "tanner", "chu chu", "count dracula", "bogeyman"];
+		var third_party_roles = ["Vampir","Zombie", "Werhamster", "serial killer", "cult master", "drunk", "doppelganger", "hoodlum", "tanner", "chu chu", "count dracula", "bogeyman"];
 		
 		
 		list_roles();
@@ -104,9 +104,9 @@
 			console.log(JSON.stringify(roles));
 			if(roles.length != players.length){
 				if(roles.length > players.length)
-					alert(roles.length - players.length + " more roles than players.");
+					alert(roles.length - players.length + " Mehr Rollen als Spieler");
 				else
-					alert(players.length - roles.length + " more players than roles.");
+					alert(players.length - roles.length + " Mehr Spieler als Rollen.");
 			}else{	
 				create_game(players,roles);
 			}
